@@ -1,0 +1,353 @@
+.price-plan{
+    font-family: Rubik;
+    font-style: normal;
+    background-color: #FBFBFB;
+    
+    .price-plan__wrapper-for-adaptive1,.price-plan__wrapper-for-adaptive2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .price-plan__wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .price-plan__content{
+        display:flex;
+        
+    }
+    .price-plan__top{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 555px;
+        margin-top: 30px;
+    }
+    .price-plan__heading{
+        margin-bottom: 20px;
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 143%;
+        color: #0B132A;
+    }
+    .price-plan__subheading{
+        text-align: center;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 190%;
+        color: #4F5665;
+    }
+    .price-plan__content{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-top:60px;
+        margin-bottom: 31px;
+    }
+    .price-plan__item{
+        display: flex;
+        width:28.596%;
+        padding: 0 2.368%;
+        margin-bottom: 40px;
+    }
+    .price-plan__background-tile{
+        display: flex;
+        border: 2px solid #DDDDDD;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        width: 100%;
+    }
+    .price-plan__item-wrapper{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        max-width: 100%;
+        justify-content: flex-start;
+        align-items: center; 
+        
+    }
+    .price-plan__image{
+        width: 148px;
+        height: 170px;
+        margin-top: 75px;
+        margin-bottom: 27px;
+    }
+    .price-plan__title{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 187%;
+        color: #0B132A;
+    }
+    .price-plan__btn-select{
+        border: 2px solid #F53838;
+        width: 180px;
+        box-sizing: border-box;
+        text-align: center;
+        border-radius: 50px;
+        margin-bottom: 48px;
+        background-color: #FFFFFF;
+        transition:all 0.5s ease;
+        &:hover{
+            border: 2px solid #df2323;
+            background-color: #df2323;
+        }
+        &:hover > .price-plan__link{
+            color: #FFFFFF;
+            background: #df2323;
+            text-shadow: 1px 1px 5px #000000;
+        }
+    }
+    .price-plan__link{
+        padding: 11px 62px; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        color: #F53838;
+        border-radius: 50px;
+        transition:all 0.5s ease;
+    }
+    .price-plan__list{
+        margin-top: 29px;
+        margin-bottom: 50px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 220%;
+        flex: 1 1 auto;
+        color: #4F5665;
+    }
+    .price-plan__list-item:not(:last-child){
+        margin-bottom: 10px;
+    }
+    .price-plan__list-item{
+        position: relative;
+        padding-left:43px; 
+
+    }
+    .price-plan__list-item::before{
+        content:"";
+        background-image: url(../images/price-plan/jam_check.svg);
+        background-size:cover;
+        position: absolute;
+        top: 0;
+        left: -1.4px;
+        width: 24px;
+        height: 20px;
+    }
+    .price-plan__list-item:first-child::before{
+        content:"";
+        background-image: url(../images/price-plan/first_jam_check.svg);
+        top: 1px;
+        width: 24px;
+        height: 24px;
+    }
+    .price-plan__price{
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 120%;
+        color: #4F5665;
+        margin-bottom: 19px;
+    }
+    .price-plan__money{
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 120%;
+        color: #0B132A;
+    }
+    .price-plan__item--on-sale{
+        position: relative;
+        .price-plan__btn-select{
+            background-color: #F53838;
+            box-shadow: 0px 20px 50px -16px rgba(245, 56, 56, 1);
+        }
+        .price-plan__link{
+            color: #FFFFFF;
+            transition:all 0.5s ease;
+            &:hover{
+                background-color: #df2323;
+                text-shadow: 1px 1px 5px #000000;
+            }
+        }
+        .price-plan__background-tile{
+            border: 2px solid #df2323;
+        }
+        &::before{
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            content: "on sale";
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 14px;
+            background-color: #F53838;
+            color: #FFFFFF;
+            border-radius: 50px;
+            padding: 9px 34px;
+        }
+    }
+    @include breakpoint(medium){
+        .price-plan__heading{
+            margin-top: 0px;
+        }
+    }
+    @media (max-width:850px) {
+        .price-plan__list-item{
+            padding-left:25px; 
+        }
+    }
+    @include breakpoint(extra-small){
+        .price-plan__content{
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .price-plan__item{
+            width: 100%;
+            margin-bottom: 25px;
+        }
+        .price-plan__item-wrapper{
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        .price-plan__image{
+            margin: 0px;
+            padding: 0px;
+            
+        }
+        .price-plan__wrapper-for-adaptive1,.price-plan__wrapper-for-adaptive2{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex:1 1 auto;
+            margin:20px;
+        }
+        .price-plan__wrapper-for-adaptive1{
+            margin-right:0px;
+        }
+        .price-plan__wrapper-for-adaptive2{
+            margin-left:0px;
+        }
+        .price-plan__list{
+            margin:25px 0;
+            flex: 0 1 auto;
+        }
+        .price-plan__btn-select{
+            margin: 0 0 20px;
+        }
+        .price-plan__list-item{
+            position: relative;
+            padding-left:26px; 
+    
+        }
+        .price-plan__list-item::before{
+            content:"";
+            top: 0;
+            left: -1.4px;
+            width: 24px;
+            height: 20px;
+        }
+        .price-plan__list-item:first-child::before{
+            content:"";
+            background-image: url(../images/price-plan/first_jam_check.svg);
+            top: 1px;
+            width: 24px;
+            height: 24px;
+        }
+    }
+    @media (max-width:660px) {
+        .price-plan__wrapper-for-adaptive1,.price-plan__wrapper-for-adaptive2{
+            width: 25%;
+
+        }
+        .price-plan__wrapper-for-adaptive2{
+            margin: 0 auto;
+        }
+        .price-plan__content{
+            justify-content: center;
+        }
+        .price-plan__list{
+            margin: 20px 0;
+            width: 50%;
+        }
+        .price-plan__btn-select{
+            margin-bottom:20px;
+        }
+        .price-plan__item{
+            width: 80%;
+        }
+
+        .price-plan__top{
+            width: 90%;
+        }
+
+        
+    }
+    @media (max-width:555px) {
+        .price-plan__wrapper-for-adaptive1,.price-plan__wrapper-for-adaptive2{
+            width: 100%;
+            margin: 20px 0;
+        }
+        .price-plan__heading{
+            font-size: 30px;
+            line-height: 120%;
+        }
+        .price-plan__content{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            margin-top:60px;
+            margin-bottom: 71px;
+
+        }
+        .price-plan__item{
+            display: flex;
+            width:100%;
+        }
+        .price-plan__background-tile{
+            display: flex;
+            border: 2px solid #DDDDDD;
+            border-radius: 10px;
+            width: 100%;
+            
+        }
+        .price-plan__item-wrapper{
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            max-width: 100%;
+            justify-content: flex-start;
+            align-items: center; 
+            
+        }
+        .price-plan__image{
+            min-width: 148px;
+            min-height: 170px;
+        }
+        .price-plan__list{
+            width: 100%;
+            margin: 0 auto;
+        }
+        .price-plan__list-item{
+            width:160px;
+            margin: 0 auto;
+        }
+        .price-plan__btn-select{
+            margin-bottom:0;
+        }
+    }
+
+    @include breakpoint(mobile){
+        .price-plan__heading{
+            font-size: 25px;
+            line-height: 120%;
+        }
+    }
+}

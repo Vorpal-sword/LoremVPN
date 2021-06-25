@@ -1,0 +1,183 @@
+footer{
+    font-family: Rubik;
+    font-style: normal;
+    background-color: #f8f8f8;
+    .footer__wrapper{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom:90px;
+        padding-top: 180px;
+    }
+    .footer__span-logo{
+        font-weight: 700;
+    }
+    .footer__main-span{
+        font-weight: 500;
+    }
+    .footer__left-side{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding-right: 10px;
+    }
+    .footer__logo{
+        margin-bottom: 22px;
+        width: 149px;
+    }
+    .footer__logo-link{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: content-box;
+        &:hover > .footer__logo-title{
+            transform: scale(1.02);
+            &:before {
+                width: 100%;
+                left: 0;
+            }
+        }
+    }
+    .footer__logo-title{
+        position: relative;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 120%;
+        color: #0B132A;
+        &:before {
+            content: "";
+            width: 0;
+            height: 0.1em;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transition: all 0.3s;
+            background: #0B132A;
+          }
+    }
+    .footer__slogan{
+        width: 340px;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 190%;
+        color: #4F5665;
+    }
+    .footer__copyright{
+        position: absolute;
+        margin-top: 211px;
+        font-size: 16px;
+        line-height: 187%;
+        color: #AFB5C0;
+    }
+    .footer__nav{
+        display: flex;
+        flex-wrap: wrap;
+        width: 46.775%;
+    }
+    .footer__nav-list{
+        margin-top: 3px;
+        width: 30.133%;
+        padding: 1.6%;
+    }
+    .footer__nav-link{
+        display: inline-block;
+        font-size: 1em;
+        position: relative;
+        color: #4F5665; 
+        &:before {
+          content: "";
+          width: 0;
+          height: 0.1em;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transition: all 0.3s;
+          background: #4F5665;
+        }
+        &:hover {
+            color: #F53855;
+          &:before {
+            width: 100%;
+            left: 0;
+            background: #F53838;
+          }
+        }
+    }
+    .footer__nav-item:first-of-type{
+        margin-bottom: 20px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 167%;
+        color: #0B132A;
+    }
+
+    .footer__nav-item{
+        display:block;
+        padding: 0 10px;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 190%;
+        margin-bottom: 10px;
+    }
+    @include breakpoint(small){
+        .footer__nav{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+    }
+    @include breakpoint (extra-small){
+        .footer__wrapper{
+            padding-top: 150px;
+            display: flex;
+            flex-direction: column;
+            text-align:center;
+            padding-bottom:0;
+        }
+        .footer__left-side{
+            text-align:center;
+        }
+        .footer__logo{
+            margin: 30px auto 20px;
+        }
+        .footer__copyright{
+            position: relative;
+            margin: 0 0 35px;
+            order: 1;
+            padding-top: 0;
+        }
+        .footer__slogan{
+            margin: 0 auto;
+        }
+        .footer__nav-list{
+            margin: 20px auto;
+            width: 30%;
+            flex-wrap: wrap;
+        }
+    }
+    @include breakpoint(mobile-landscape){
+        .footer__logo{
+            width: 140px;
+        }
+        .footer__logo-title{
+            font-size: 18px;
+        }
+        .footer__slogan{
+            font-size: 14px;
+        }
+        .footer__copyright{
+            font-size: 14px;
+        }
+        .footer__nav-item:first-of-type{
+            font-size: 16px;
+        }
+        .footer__nav-item{
+            font-size: 14px;
+        }
+    }
+    @include breakpoint(mobile){
+
+        .footer__slogan{
+            width: 100%;
+        }
+    }
+}

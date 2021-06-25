@@ -1,0 +1,153 @@
+.icons-section{
+    font-family: Rubik, sans-serif;
+    font-style: normal;
+    .icons-section__wrapper{
+        margin: 65px 0;
+        padding: 36px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: center;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0px 20px 20px 5px rgba(163, 163, 163, 0.1);
+    }
+    .icons-section__item{
+        position: relative;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        flex-grow: 1;
+        flex-basis: 30%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        &:not(:last-of-type):not(:first-of-type){
+            flex-basis: 38%;
+        }
+        &:first-of-type{
+            flex-basis: 32%;
+        }
+    }
+
+    
+    .icons-section__item:not(:last-of-type)::after{
+        position: absolute;
+        content: "";
+        right: 0;
+        bottom: 0;
+        height: 85%;
+        width: 2px;
+        background-color: #EEEFF2;       
+
+    }
+    .icons-section__item-icon{
+        align-self: start;
+        width: 55px;
+        height: 55px;
+        margin: 5px 18px 0;
+    }
+    .icons-section__item-value-and-subtitle{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 0 18px;
+    }
+    .icons-section__item-value{ 
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 120%;
+        margin-top: 1px;
+        margin-bottom:4px;
+    }
+    .icons-section__item-subtitle{
+        margin-top: 0;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 150%;
+        color: #4F5665;
+    }
+    @include breakpoint(medium){
+        .icons-section__wrapper{
+            margin:20px auto;
+            width: 90%;
+        }
+        .icons-section__item-value-and-subtitle{
+            padding: 0 10px;
+        }
+        .icons-section__item-value{ 
+            font-size: 22px;
+            line-height: 100%;
+        }
+        .icons-section__item-subtitle{
+            font-size: 18px;
+            line-height: 100%;
+        }
+        .icons-section__item-icon{
+
+            margin: 0 10px;
+        }
+    }
+    @include breakpoint(small){
+        .icons-section__wrapper{
+            margin:20px auto;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            width: 100%;
+        }
+        .icons-section__item:not(:last-of-type)::after{
+            left: -100%;
+            bottom: 0;
+            height: 2px;
+            width: 300%;  
+        }
+        .icons-section__item{
+            width: 150px;
+            padding: 40px 0;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .icons-section__item:not(:last-of-type){       
+            display: flex;
+        }
+        .icons-section__item-value{ 
+            font-size: 20px;
+            line-height: 100%;
+        }
+        .icons-section__item-subtitle{
+            font-size: 16px;
+            line-height: 100%;
+        }
+    }
+    @include breakpoint(extra-small){
+        .icons-section__item:not(:last-of-type)::after{
+            left: -50%;
+            width: 200%;  
+        }
+        .icons-section__item-value{ 
+            font-size: 18px;
+            line-height: 100%;
+        }
+        .icons-section__item-subtitle{
+            font-size: 14px;
+            line-height: 100%;
+        }
+        .icons-section__item-icon{
+            width: 40px;
+            height: 40px;
+        }
+
+    }
+    @include breakpoint(mobile-landscape){
+        .icons-section__item:not(:last-of-type)::after{
+            left: -33.33%;
+            width: 150%;  
+        }
+    }
+    @include breakpoint(mobile){
+        .icons-section__item:not(:last-of-type)::after{
+            left: -15%;
+            width: 125%;  
+        }
+    }
+}

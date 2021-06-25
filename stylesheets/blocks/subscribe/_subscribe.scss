@@ -1,0 +1,118 @@
+.subscribe{
+    font-family: Rubik;
+    font-style: normal;
+    position: relative;
+    transform: translateY(50%);
+    .subscribe__wrapper{
+        padding:20px 0;
+        display: flex;
+        align-items: center;
+        box-shadow: 0px 20px 100px 5px rgba(163, 163, 163, 0.1);
+        background-color: #FFFFFF;
+        border-radius: 10px;
+    }
+    .subscribe__text-wrapper{
+        margin: 10px 0 30px 70px;
+        display: flex;
+        flex-direction: column ;
+        flex: 1 1 auto;
+        justify-content: flex-start;
+    }
+    .subscribe__heading{
+        margin-top: 5px;
+        width: 90%;
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 129%;
+        color: #0B132A;
+    }
+    .subscribe__subheading{
+        width: 80%;
+        margin-top: 13px;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 190%;
+        color: #4F5665;
+    }
+    .subscribe__btn-subscribe{
+        align-items: center;
+        margin-top: -2px;
+        min-width: 250px;
+        background: #F53838;
+        border-radius: 10px;
+        margin-right: 70px;
+        box-shadow: 0px 25px 60px -20px rgba(245, 56, 56, 1);
+    }
+    .subscribe__btn-link{
+        padding: 19px 15px 17px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 25px;
+        border-radius: 10px;
+        text-decoration: none;
+        color: #FFFFFF;
+        transition:all 0.5s ease;
+        &:hover{
+            background: #df2323;
+            text-shadow: 1px 1px 5px #000000;
+            transform: scale(1.02);
+        }
+    }
+    @include breakpoint (small){
+        .subscribe__heading{
+            margin-top: 5px;
+        }
+        .subscribe__heading{
+            font-size: 30px;
+        }
+    }
+    @include breakpoint (extra-small){
+        margin-top: -100px;
+        .subscribe__wrapper{
+        position: relative;
+        transform: translateY(0);
+        flex-direction: column;
+        padding:20px 0 60px;
+        }
+        .subscribe__text-wrapper{
+            text-align: center;
+            margin: 0 auto;
+        }
+        .subscribe__btn-subscribe{
+            margin: 20px 0 0;
+        }
+        .subscribe__heading{
+            margin: 5px auto 0;
+        }
+        .subscribe__subheading{
+            margin: 13px auto 0;
+
+        }
+
+    }
+    @include breakpoint (mobile-landscape){
+        .subscribe__heading{
+            width: 90%;
+            margin: 15px auto 0;
+            font-size: 25px;
+        }
+        .subscribe__btn-link{
+            font-size: 14px;
+        }
+        .subscribe__subheading{
+            width: 90%;
+            font-size: 14px;
+        }
+        .subscribe__btn-link{
+            padding: 15px 0;
+        }
+    }
+    @include breakpoint (mobile){
+        .subscribe__heading{
+            font-size: 20px;
+        }
+
+    }
+
+}

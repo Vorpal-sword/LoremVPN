@@ -1,0 +1,207 @@
+.header{
+    font-family: Rubik, sans-serif;
+    font-style: normal;
+    .header__wrapper{
+        padding: 45px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header__logo{
+        width: 149px;
+        
+    }
+    .header__logo-link{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: content-box;
+        &:hover > .header__logo-title{
+            transform: scale(1.02);
+            &:before {
+                width: 100%;
+                left: 0;
+            }
+        }
+    }
+    .header__logo-title{
+        position: relative;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        color: #0B132A;
+        &:before {
+            content: "";
+            width: 0;
+            height: 0.1em;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transition: all 0.3s;
+            background: #0B132A;
+          }
+    }
+    .header__list{
+        display: flex;
+        margin-left: 11px;
+    }
+    .header__list-item{
+        width: 100%;
+        height: 100%;
+
+    }
+    .header__list-item:not(:last-child){
+        margin-right: 40px;
+    }
+    .header__main-menu-link{
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: #4F5665;
+
+        font-size: 1em;
+        position: relative;
+        &:before {
+          content: "";
+          width: 0;
+          height: 0.1em;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transition: all 0.3s;
+          background: #4F5665;
+        }
+        &:hover {
+            color: #f53838;
+          &:before {
+            width: 100%;
+            left: 0;
+            background: #F53838;
+          }
+        }
+    }
+    .header__sign-in-up{
+        display: flex;
+        align-items: center;
+    }
+    .header__sign-in-up-link{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        box-sizing: border-box;
+        margin-top: 1px;
+        color: #0B132A;
+        width: 60px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 118.75%;
+
+        font-size: 1em;
+        position: relative;
+        &:before {
+          content: "";
+          width: 0;
+          height: 0.1em;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transition: all 0.3s;
+          background: #4F5665;
+        }
+        &:hover {
+            color: #F53855;
+          &:before {
+            width: 100%;
+            left: 0;
+            background: #F53838;
+          }
+        }
+    }
+    .header__btn-sign-up{
+        margin-top: 1px;
+        width: 150px;
+        color: #F53855;
+        padding: 13px 25px;
+        border: 1px solid #F53855;
+        border-radius: 50px;
+        transition:all 0.5s ease;
+        &:hover{
+            color: #FFFFFF;
+            background: #df2323;
+            text-shadow: 1px 1px 5px #000000;
+            &::before{
+                display: none;
+            }
+        }
+    }
+    .header__sign-in-up-item:last-child{
+        margin-left: 26px;
+    }
+    .header__burger-menu{
+        display: none;
+    }
+    .header__burger-menu-title{
+        font-weight: 500;
+    }
+    .header__burger-menu-icon{
+        position: relative;
+        content: "";
+        height: 2px;
+        border:solid black;
+        border-width: 0 25px 0 0;
+        margin-left:15px ;
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0px;
+            top:10px;
+            width: 25px;
+            border:solid black;
+            border-width:2px 0 0 0;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            left: 0px;
+            top:-10px;
+            width: 25px;
+            border:solid black;
+            border-width:2px 0 0 0;
+        }
+    }
+    @include breakpoint(small){
+        .header__wrapper{
+            padding: 20px 0;
+        }
+        .header__list-item:not(:last-child){
+            margin-right: 15px;
+        }
+        .header__sign-in-up-item:last-child{
+            margin-left: 5px;
+        }
+        .header__sign-in-up{
+            display: none;
+        }
+        .main-menu{
+            display: none;}
+            .header__burger-menu{
+                display: flex;
+                align-items: center;
+            }
+    }   
+    @include breakpoint(extra-small){
+        .header__wrapper{
+            display: flex;
+            justify-content: space-between ;
+            align-items: center;
+        }
+    }
+    @include breakpoint(mobile){
+        .header__burger-menu-title{
+            display: none;
+        }
+    }
+    
+}

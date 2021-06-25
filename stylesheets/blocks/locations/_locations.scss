@@ -1,0 +1,102 @@
+.locations{
+    font-family: Rubik;
+    font-style: normal;
+    .locations__wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .locations__top{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 555px;
+        margin-top: 30px;
+    }
+    .locations__heading{
+        width: 383px;
+        margin-bottom: 20px;
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 143%;
+        color: #0B132A;
+    }
+    .locations__subheading{
+        margin-bottom: 20px;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 190%;
+        color: #4F5665;
+    }
+    .locations__logos{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        margin: 70px 0 50px;
+        flex-wrap: wrap;
+        
+    }
+    .locations__logos-link{
+        display: flex;
+        align-items: center;
+        width: 193px;
+        height: 60px;
+        justify-content: center;
+        margin-bottom: 30px;
+        color: #0B132A;
+        &:hover {
+            filter:invert(1);
+          &:before {
+            width: 100%;
+            left: 0;
+            background: #f53838;
+          }
+        }
+        flex:0 1 20%;
+    }
+    @include breakpoint(small){
+        .locations__logos{
+            margin: 20px 0 0 0;
+            flex-wrap: wrap;
+        }
+        .locations__heading{
+            margin: 0px;
+            font-size: 30px;
+        }
+        .locations__logos-link{
+            flex:0 1 25%;
+        }
+    }
+    @include breakpoint(extra-small){
+        .locations__logos-link{
+            flex:0 1 33.33%;
+        }
+    }
+
+    @include breakpoint(small-tablet-portrait){
+        .locations__top{
+            width: 100%;
+        }
+        .locations__heading{
+            width: 100%;
+        }
+        .locations__logos-link{
+            flex:0 1 50%;
+        }
+    }
+    @include breakpoint(mobile-landscape){
+        .locations__heading{
+            font-size:25px
+        }
+        .locations__subheading{
+            font-size:14px
+        }
+        .locations__logos-link:not(:last-child){
+            margin-bottom: 15px;
+        }
+        .locations__logos-link{
+            flex:0 1 100%;
+        }
+    }
+}
